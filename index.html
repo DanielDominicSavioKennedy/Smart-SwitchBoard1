@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Smart-SwitchBoard</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+ 
+  <nav> 
+    <a id="title">Smart-SwitchBoard</a> 
+    <div>
+    <svg onclick="record()" viewBox="0 0 51 57" fill="none" >
+        <g filter="url(#filter0_d_4_72)">
+        <path d="M15.9375 9.1875C15.9375 6.75082 16.945 4.41395 18.7383 2.69096C20.5316 0.967966 22.9639 0 25.5 0C28.0361 0 30.4684 0.967966 32.2617 2.69096C34.055 4.41395 35.0625 6.75082 35.0625 9.1875V24.5C35.0625 26.9367 34.055 29.2736 32.2617 30.9965C30.4684 32.7195 28.0361 33.6875 25.5 33.6875C22.9639 33.6875 20.5316 32.7195 18.7383 30.9965C16.945 29.2736 15.9375 26.9367 15.9375 24.5V9.1875Z" fill="#FFD233"/>
+        <path d="M11.1562 19.9062C11.5789 19.9062 11.9843 20.0676 12.2832 20.3547C12.5821 20.6419 12.75 21.0314 12.75 21.4375V24.5C12.75 27.7489 14.0933 30.8647 16.4844 33.1621C18.8755 35.4594 22.1185 36.75 25.5 36.75C28.8815 36.75 32.1245 35.4594 34.5156 33.1621C36.9067 30.8647 38.25 27.7489 38.25 24.5V21.4375C38.25 21.0314 38.4179 20.6419 38.7168 20.3547C39.0157 20.0676 39.4211 19.9062 39.8438 19.9062C40.2664 19.9062 40.6718 20.0676 40.9707 20.3547C41.2696 20.6419 41.4375 21.0314 41.4375 21.4375V24.5C41.4375 28.2961 39.97 31.9568 37.3196 34.7721C34.6692 37.5873 31.0249 39.3563 27.0938 39.7359V45.9375H36.6562C37.0789 45.9375 37.4843 46.0988 37.7832 46.386C38.0821 46.6732 38.25 47.0626 38.25 47.4688C38.25 47.8749 38.0821 48.2643 37.7832 48.5515C37.4843 48.8387 37.0789 49 36.6562 49H14.3438C13.9211 49 13.5157 48.8387 13.2168 48.5515C12.9179 48.2643 12.75 47.8749 12.75 47.4688C12.75 47.0626 12.9179 46.6732 13.2168 46.386C13.5157 46.0988 13.9211 45.9375 14.3438 45.9375H23.9062V39.7359C19.9751 39.3563 16.3308 37.5873 13.6804 34.7721C11.03 31.9568 9.56245 28.2961 9.5625 24.5V21.4375C9.5625 21.0314 9.73041 20.6419 10.0293 20.3547C10.3282 20.0676 10.7336 19.9062 11.1562 19.9062Z" fill="#FFD233"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_4_72" x="-4" y="0" width="59" height="57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_72"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_72" result="shape"/>
+        </filter>
+        </defs>
+        </svg><div id="vib"></div>
+    </div>
+        
+    <div onclick="openForm()" class="form" id="settings">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+    </div> 
+  </nav>
+  <div id="s1" class="s1">
+  <div class="sn1">1st</div>
+  <div class="switchboard1">
+          <div id="s" onclick="click()" class="ss1">1</div>
+          <div id="s" onclick="click()" class="ss2">2</div>
+          <div id="s" onclick="click()" class="ss3">3</div>
+          <div id="s" onclick="click()" class="ss4">4</div>
+</div>
+</div>
+<div class="form-popup" id="myForm">
+    <form class="form-container">
+      <div id="messages">adcmadmv</div>
+      <h1>Connect to Server</h1>
+  
+      <label for="ip"><b>IP</b></label>
+      <input id="ip" type="text" placeholder="Enter IP address" name="ip" required>
+  
+      <label  for="port"><b>Port</b></label>
+      <input id="port" type="text" placeholder="Enter Port" name="port" required>
+  
+      <label  for="topic"><b>Topic</b></label>
+      <input id="topic" type="text" placeholder="Enter Topic" name="topic" required>
+
+      <button type="Connect" onclick="assign()"class="btn">Connect</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+<div id="s2" class="s2">
+    <div class="sn2">2nd</div>
+    <div class="switchboard2">
+        <div id="s" onclick="click()" class="ss1">1</div>
+        <div id="s" onclick="click()" class="ss2">2</div>
+        <div id="s" onclick="click()" class="ss3">3</div>
+        <div id="s" onclick="click()" class="ss4">4</div>
+     </div>
+  </div>
+
+
+ <div class="request" type="text" name="" id="speech"></div>
+  <div class="response" id = "resp"></div>
+  <script src="script.js"></script>
+  <!-- <script src="test.js"></script>--> 
+</body>
+</html>
